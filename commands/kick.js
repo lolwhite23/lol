@@ -7,8 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let kReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("You don't have the correct perms!");
     if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
-    const liveJoin = bot.channels.get("543576078242021376");
-    let kickEmbed = new discord.RichEmbed()
+    const liveJoin = bot.channels.get("562800536303304734");
     if(!kReason){
      "No reason."   
         
