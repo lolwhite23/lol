@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
      "No reason."   
         
     }
+        let kickEmbed = new discord.RichEmbed()
     .setTitle("~Kick~")
     .setColor("#e56b00")
     .addField("Kicked User:", `${kUser} with ID ${kUser.id}`)
