@@ -46,9 +46,9 @@ try {
 
 bot.on('guildMemberAdd', member => {
 
-  member.guild.channels.get('562789527437967360').setName(`Total Humans: ${member.guild.members.filter(member => !member.user.bot).size}`)
-  member.guild.channels.get('562789564498968597').setName(`Total Members: ${member.guild.memberCount}`)
-  member.guild.channels.get('562789600930693130').setName(`Total Bots: ${member.guild.members.filter(member => member.user.bot).size}`)
+  member.guild.channels.get('562959217745723402').setName(`Total Humans: ${member.guild.members.filter(member => !member.user.bot).size}`)
+  member.guild.channels.get('562959925207105557').setName(`Total Members: ${member.guild.memberCount}`)
+  member.guild.channels.get('562959381533032450').setName(`Total Bots: ${member.guild.members.filter(member => member.user.bot).size}`)
 
   if(member.bot) return;
 
@@ -87,9 +87,9 @@ bot.on('guildMemberAdd', member => {
   })
 
   bot.on('guildMemberRemove', member => {
-  member.guild.channels.get('562789527437967360').setName(`Total Humans: ${member.guild.members.filter(member => !member.user.bot).size}`)
-  member.guild.channels.get('562789564498968597').setName(`Total Members: ${member.guild.memberCount}`)
-  member.guild.channels.get('562789600930693130').setName(`Total Bots: ${member.guild.members.filter(member => member.user.bot).size}`)
+  member.guild.channels.get('562959217745723402').setName(`Total Humans: ${member.guild.members.filter(member => !member.user.bot).size}`)
+  member.guild.channels.get('562959925207105557').setName(`Total Members: ${member.guild.memberCount}`)
+  member.guild.channels.get('562959381533032450').setName(`Total Bots: ${member.guild.members.filter(member => member.user.bot).size}`)
     
       let leave = new discord.RichEmbed()
   .setAuthor('Goodbye!', bot.user.displayAvatarURL)
