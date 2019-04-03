@@ -49,6 +49,9 @@ bot.on('guildMemberAdd', member => {
   member.guild.channels.get('562959217745723402').setName(`Total Humans: ${member.guild.members.filter(member => !member.user.bot).size}`)
   member.guild.channels.get('562959925207105557').setName(`Total Members: ${member.guild.memberCount}`)
   member.guild.channels.get('562959381533032450').setName(`Total Bots: ${member.guild.members.filter(member => member.user.bot).size}`)
+ 
+ let role = member.guild.roles.find("name", "Members");
+ member.addRole(role).catch(console.error);
 
   if(member.bot) return;
 
