@@ -24,9 +24,9 @@ bot.on('ready', function() {
   console.log(`${bot.user.username} is online!`)
   setInterval(async () => {
 const statuslist = [
-  '',
-  ``,
-  ``
+  'IP: Coming soon',
+  `>help | v1.2`,
+  `Website: Coming soon`
 ];
 const random = Math.floor(Math.random() * statuslist.length);
 
