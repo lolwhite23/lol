@@ -7,7 +7,6 @@ module.exports.run = async(bot, message) => {
     let mChannel = message.mentions.channels.first()
     let messageArray = message.content.split(" ");
     let args = messageArray.slice(1);
-    console.log(args)
     let announcement = args.slice(1).join(" ");
     if(!args) return message.channel.send(`Usage: <channel> <message>`);
     let embed = new Discord.RichEmbed()
