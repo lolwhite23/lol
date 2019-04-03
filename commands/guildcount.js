@@ -12,7 +12,7 @@ exports.run = async(bot, message, args) => {
   .setAuthor('Guild Count', message.guild.iconIRL)
   .addField("Humans:", `${message.guild.members.filter(member => !member.user.bot).size}`, true)
   .addField("Bots:", `${message.guild.members.filter(member => member.user.bot).size}`, true)
-  .addField("Total Members, `${message.guild.memberCount}`, true)
+  .addField("Total Members", `${message.guild.memberCount}`, true)
   .addField(resp, '_ _')
 }
 
