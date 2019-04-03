@@ -74,15 +74,15 @@ bot.on('guildMemberAdd', member => {
   let logChannelw = member.guild.channels.find('name', 'mod-log');
 
   let logEmbedw = new discord.RichEmbed()
-  .setAuthor("Member left", bot.user.displayAvatarURL)
+  .setAuthor("Member joined", bot.user.displayAvatarURL)
   .setThumbnail(member.user.displayAvatarURL)
-    .addField(member.user.username + " Has left the server.", '_ _')
+    .addField(member.user.username + " Has joined the server.", '_ _')
     .addField(`ID: ${member.user.id}`, '_ _')
     .addField(`Tag: #${member.user.discriminator}`, '_ _')
     .addField("Total members:", `${member.guild.memberCount}`)
     .addField("Total Humans:", `${member.guild.members.filter(member => !member.user.bot).size}`)
   .setFooter("Zorah | Logs")
-  .setColor("#DD1919")
+  .setColor("#2CDD19")
   .setTimestamp()
   logChannelw.send(logEmbedw);
 
