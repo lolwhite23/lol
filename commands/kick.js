@@ -9,6 +9,10 @@ module.exports.run = async (bot, message, args) => {
     if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
     const liveJoin = bot.channels.get("543576078242021376");
     let kickEmbed = new discord.RichEmbed()
+    if(!kReason){
+     "No reason."   
+        
+    }
     .setTitle("~Kick~")
     .setColor("#e56b00")
     .addField("Kicked User:", `${kUser} with ID ${kUser.id}`)
