@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 
 exports.run = async(bot, message, args) => {
   var resp = 
-  "Members: " + message.guild.memberCount + "\n" +
   "Online: " + message.guild.members.filter(o => o.presence.status === 'online').size + "\n" +
   "Away: " + message.guild.members.filter(i => i.presence.status === 'idle').size + "\n" +
   "DND: " + message.guild.members.filter(d => d.presence.status === 'dnd').size + "\n" +
