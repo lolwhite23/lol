@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
         let helpembedall2 = new Discord.RichEmbed()
         .setColor("#36393e")
         .setAuthor("All Commands:", bot.user.displayAvatarURL)
-        .addField("Prefix: `~`", `_ _`)
+        .addField("Prefix: `>`", `_ _`)
         .addField("====== Server Commands ======", '_ _')
         .addField("IP:", "Shows the server IP")
         .addField("Info:", "Shows the website link, an invite link, and a patreon page to donate")
