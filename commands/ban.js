@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!bUser) return message.channel.send(bembederroru);
         let bReason = args.join(" ").slice(22);
-        if(!message.member.hasPermission("SEND_MESSAGES")) return message.channel.send(bembederrorp);
+        if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(bembederrorp);
         if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send(bembederrors);
         let banEmbed = new discord.RichEmbed()
         .setTitle("Ban")
