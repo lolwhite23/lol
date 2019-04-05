@@ -189,4 +189,4 @@ if (mentioned) {
 
 });
 
-bot.login('NTUxOTIxMTI0NTQ4ODA0NjA4.XKPycg.J7X3_pdPWcaFioQHpMZDSLgUv0I')
+bot.login(process.env.token)
