@@ -5,7 +5,7 @@ const bot = new Discord.Client();
 
 module.exports.run = async (bot, message, args) => {
    
-    if(message.author.id !== '561272603357085696') return message.channel.send("Only the owner can use this command!");
+    if(message.author.id !== '394638597439094795') return message.channel.send("Only the owner can use this command!");
     function clean(text) {
       if (typeof(text) === "string")
         return text.replace(/'/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
   
   console.log(`\n${message.author.username}#${message.author.discriminator} Used .Eval Command On ${message.guild.name}`)
     let argresult = args.join(' ');
-    if (message.author.id !== '561272603357085696') {
+    if (message.author.id !== '394638597439094795') {
            // Check if user have Permissions to use the command
           return; // Returns the code so the rest doesn't run
         }
