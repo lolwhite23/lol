@@ -14,9 +14,8 @@ module.exports.run = async (bot, message, args) => {
         let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!bUser) return message.channel.send(bembederroru);
         let bReason = args.join(" ").slice(22);
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(bembederrorp);
+        if(!message.member.hasPermission("SEND_MESSAGES")) return message.channel.send(bembederrorp);
         if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send(bembederrors);
-        const liveJoin = bot.channels.get("558116247687004171");
         let banEmbed = new discord.RichEmbed()
         .setTitle("Ban")
         .setColor("#bc0000")
@@ -30,7 +29,6 @@ module.exports.run = async (bot, message, args) => {
     
         message.guild.member(bUser).ban(bReason);
         message.channel.send(`You banned ${bUser} for **${bReason}**`).then(msg => msg.delete(5000));
-        liveJoin.send(banEmbed)
     
     
         return;
