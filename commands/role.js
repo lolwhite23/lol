@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 exports.run = async (bot, message, args) => {
     var user = message.mentions.members.first(); 
-    var roleName = args.splice(1).join(' ');
+    var roleName = args.splice(2).join(' ');
     var create = args.splice(1).join(' '); 
     var role = message.guild.roles.find('name', roleName);
     
