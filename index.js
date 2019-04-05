@@ -71,7 +71,7 @@ bot.on('guildMemberAdd', member => {
  let welcomeChannel = member.guild.channels.find('id', '562439350420373515');
   welcomeChannel.send(welcome)
 
-  let logChannelw = member.guild.channels.find('name', 'mod-log');
+  let logChannelw = member.guild.channels.find('id', '562800536303304734');
 
   let logEmbedw = new discord.RichEmbed()
   .setAuthor("Member joined", bot.user.displayAvatarURL)
@@ -108,7 +108,7 @@ bot.on('guildMemberAdd', member => {
     leaveChannel.send(leave);
     
     
-  let logChannel = member.guild.channels.find('name', 'mod-log');
+  let logChannel = member.guild.channels.find('id', '562800536303304734');
 
     let logEmbed2 = new discord.RichEmbed()
     .setAuthor("Member left", bot.user.displayAvatarURL)
