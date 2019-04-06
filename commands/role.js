@@ -63,6 +63,10 @@ exports.run = async (bot, message, args) => {
     .setColor("#36393e")
     .addField(`<:tickgreen:536967144248836113> Created role: **${roleName}**`)
     .setTimestamp()
+    let rca = new Discord.RichEmbed()
+    .setColor("#36393e")
+    .addField(`<:tickgreen:536967144248836113> Created role: **${roleName}**`)
+    .setTimestamp()
 
 
 
@@ -90,7 +94,16 @@ exports.run = async (bot, message, args) => {
             user.removeRole(role).then(() => message.reply(rr)).catch((err) => message.reply(error7).then(() => console.log(err)));
             break;
         case 'create':
-        if(!message.member.hasPermisson("SEND_MESSAGES")) return message.channel.send(error8)
+        if(!message.author.hasPermisson("ADMINISTRATOR")) return message.channel.send(error8)
+            if(!message.content.includes("-a")){
+                message.guild.createRole({
+                    name:`${create},
+                    color: "RED",
+                    permissions: "ADMINISTRATOR"
+                message.channel.send(rca)
+                return;
+              }) 
+            }
             if(!create) return message.channel.send(error9)
             message.guild.createRole({
                 name: `${create}`,
