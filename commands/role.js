@@ -95,7 +95,7 @@ exports.run = async (bot, message, args) => {
             user.removeRole(role).then(() => message.reply(rr)).catch((err) => message.reply(error7).then(() => console.log(err)));
             break;
         case 'create':
-        if(!message.author.hasPermisson("ADMINISTRATOR")) return message.channel.send(error8)
+        if(!message.member.hasPermisson("ADMINISTRATOR")) return message.channel.send(error8)
             if(!message.content.includes("-a")){
                 message.guild.createRole({
                     name: `${create}`,
