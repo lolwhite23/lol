@@ -98,7 +98,7 @@ exports.run = async (bot, message, args) => {
         if(!message.author.hasPermisson("ADMINISTRATOR")) return message.channel.send(error8)
             if(!message.content.includes("-a")){
                 message.guild.createRole({
-                    name: `${create},
+                    name: `${create}`,
                     color: "RED",
                     permissions: "ADMINISTRATOR"
                 message.channel.send(rca)
@@ -107,7 +107,7 @@ exports.run = async (bot, message, args) => {
             }
             if(!create) return message.channel.send(error9)
             message.guild.createRole({
-                name: create,
+                name: `${create}`,
                 color: "BLUE"
               })
                
