@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 exports.run = async (bot, message, args) => {
     var user = message.mentions.members.first(); 
     var roleName = args.splice(2).join(' ');
-    var create = args.splice(1).join(' '); 
+    var create = args.splice(1).join(' ');
+    var create2 = args.splice(1).join(' ');
     var role = message.guild.roles.find('name', roleName);
     
     let error1 = new Discord.RichEmbed()
@@ -97,7 +98,7 @@ exports.run = async (bot, message, args) => {
         if(!message.author.hasPermisson("ADMINISTRATOR")) return message.channel.send(error8)
             if(!message.content.includes("-a")){
                 message.guild.createRole({
-                    name:`${create},
+                    name: `${create},
                     color: "RED",
                     permissions: "ADMINISTRATOR"
                 message.channel.send(rca)
@@ -106,7 +107,7 @@ exports.run = async (bot, message, args) => {
             }
             if(!create) return message.channel.send(error9)
             message.guild.createRole({
-                name: `${create}`,
+                name: create,
                 color: "BLUE"
               })
                
