@@ -101,9 +101,9 @@ exports.run = async (bot, message, args) => {
                     name: `${create}`,
                     color: "RED",
                     permissions: "ADMINISTRATOR"
+                })
                 message.channel.send(rca)
                 return;
-              }) 
             }
             if(!create) return message.channel.send(error9)
             message.guild.createRole({
