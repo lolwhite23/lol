@@ -6,7 +6,6 @@ module.exports.run = async(bot, message, args) => {
     let rMember = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if (!rMember) return message.reply("That user does not exist.");
     rMember.removeRoles(rMember.roles).then(console.log).catch(console.error); 
-    if(!kReason)
   message.channel.send(`<:tickgreen:536967144248836113> You have demoted ${rMember} for **${kReason ? kReason : 'No reason provided.'}**`);
     channel = bot.channels.get("564934769310302209");
     let embed = new Discord.RichEmbed()
