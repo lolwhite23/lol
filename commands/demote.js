@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args) => {
     .setTitle("Demotion:")
     .addField("Demotee:", rMember.tag)
     .addField("Moderator:", message.author.tag)
-    .addField("Reason:", `${kReason ? kReason : 'No reason provided.'})
+    .addField("Reason:", `${kReason ? kReason : 'No reason provided.'}`)
     .setTimestamp()
     channel.send(embed)
     }
