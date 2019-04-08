@@ -74,6 +74,7 @@ exports.run = async (bot, message, args) => {
 
     switch (args[0]) {
         case 'add':
+             if (message.member.hasPermission('ADMINISTRATOR')) {
             if (!user) return message.reply(error2); 
             if (!roleName) return message.reply(error1); 
             if (!message.guild.roles.find('name', roleName)) return message.reply(error3);
@@ -81,9 +82,10 @@ exports.run = async (bot, message, args) => {
 
 
             user.addRole(role).then(() => message.reply(ra)).catch((err) => message.reply(error5).then(() => console.log(err)));
+             }
             break;
         case 'remove':
-
+            if (message.member.hasPermission('ADMINISTRATOR')) {
             if (!user) return message.reply(error2);
             if (!roleName) return message.reply(error1);
             
@@ -93,6 +95,7 @@ exports.run = async (bot, message, args) => {
             if (!user.roles.find('name', roleName)) return message.reply(error6);
 
             user.removeRole(role).then(() => message.reply(rr)).catch((err) => message.reply(error7).then(() => console.log(err)));
+            }  
             break;
         case 'create':
         if(!message.member.hasPermisson("ADMINISTRATOR")) return message.channel.send(error8)
